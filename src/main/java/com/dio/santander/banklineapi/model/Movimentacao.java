@@ -21,6 +21,7 @@ public class Movimentacao {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss") 
 	@Column(name = "data_hora")
 	private LocalDateTime dataHora;
 	
@@ -40,7 +41,8 @@ public class Movimentacao {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss") 
+	
+	
 	public LocalDateTime getDataHora() {
 		return dataHora;
 	}
